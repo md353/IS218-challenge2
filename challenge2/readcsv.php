@@ -6,7 +6,7 @@
 //	Challenge 1														  |
 //====================================================================|
 
-
+namespace challenge2;
 //***************************************************************
 //	Created a class for reading the CSV File & setting headings
 //***************************************************************	
@@ -25,7 +25,7 @@
 						$records[] = $record;
 					}
 				}
-				File::closeFile($handle);
+				\challenge2::closeFile($handle);
 				return $records;
 		}
 	}

@@ -9,6 +9,8 @@
 //********************************************//
 //	Created a class for opening the CSV File  //
 //********************************************//	
+	namespace challenge2;
+	
 	class File {
 		
 		//Function for opening a csv file for reading.	

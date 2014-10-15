@@ -10,6 +10,8 @@
 //	Created a class to create & print a table from 									//
 //  the information extracted off the CSVfile										//
 //**********************************************************************************//
+	namespace challenge2;
+	
 	class html_table{
 		
 		// This function prints table from csv file by heading and data
@@ -31,8 +33,9 @@
 					echo'</p>';
 			
 		}
-		public static function printTitle($colleges){
+		public static function prTitle($colleges){
 			if(empty($_GET)){
+				echo 'By:Mike De La Cruz';
 				echo '<h1 id="title">Record of Colleges</h1>';
 			}
 			else{
