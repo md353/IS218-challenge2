@@ -10,8 +10,6 @@
 //	Created a class to create & print a table from 									//
 //  the information extracted off the CSVfile										//
 //**********************************************************************************//
-	namespace challenge2;
-	
 	class html_table{
 		
 		// This function prints table from csv file by heading and data
@@ -19,14 +17,20 @@
 			if(isset($_GET['record'])){
 				echo '<table border="1">';
 				$i = 0;
+				//creating the table to 
 				foreach($records[$_GET['record']] as $key => $value){
-					echo'<tr><th>' . $titles[$i]['varTitle'] . '</th>';
+						
+					$title = $titles[$i]['varTitle'];
+					
+					echo'<tr><th>' . $title . '</th>';
 					echo '<td>' . $value . '</td></tr>';
 					$i++;
 				}
 				echo'</table>';
 			}
 		}
+		// when setlinks is called these three variables will be used to get the
+		// url and the increments and the college name
 		public static function setLinks($url, $inc, $col){
 
 			echo '<a href="?'.$url.'=' .$inc. '">' . $col. '</a>';
@@ -35,12 +39,12 @@
 		}
 		public static function prTitle($colleges){
 			if(empty($_GET)){
-				echo 'By:Mike De La Cruz';
-				echo '<h1 id="title">Record of Colleges</h1>';
+				echo '<h1 id="title"> Record of Colleges </h1>';
+				
+			}else{
+				echo '<h1>'. $colleges .'</h1>';
 			}
-			else{
-				echo '<h1 id="title">'. $colleges . '</h1>';
-			}
+			
 		}
 	}
 

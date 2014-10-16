@@ -6,14 +6,16 @@
 //	Challenge 1														  |
 //====================================================================|
 
-namespace challenge2;
+
 //***************************************************************
 //	Created a class for reading the CSV File & setting headings
 //***************************************************************	
-	class readcsv {
+	namespace challenge2\fileAdmin;
+	
+	class readcsv implements \interfaces\interfaces{
 		
 		// This function is looking for headings 
-		public function column_headingCK($handle, $colmn_titles){
+		public function column_headingCK($handle, $variable){
 			
 			while(($row = fgetcsv($handle, ",")) !== FALSE){
 					if($colmn_titles){
@@ -25,7 +27,7 @@ namespace challenge2;
 						$records[] = $record;
 					}
 				}
-				\challenge2::closeFile($handle);
+				File::closeFile($handle);
 				return $records;
 		}
 	}

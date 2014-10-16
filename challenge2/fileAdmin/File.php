@@ -1,3 +1,4 @@
+
 <?php
 
 //====================================================================|
@@ -9,9 +10,10 @@
 //********************************************//
 //	Created a class for opening the CSV File  //
 //********************************************//	
-	namespace challenge2;
 	
-	class File {
+	namespace challenge2\fileAdmin;
+	
+	class File implements \interfaces\interfaces{
 		
 		//Function for opening a csv file for reading.	
 		public static function openFile($file){
