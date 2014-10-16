@@ -10,12 +10,12 @@
 //***************************************************************
 //	Created a class for reading the CSV File & setting headings
 //***************************************************************	
-	namespace challenge2\fileAdmin;
+	namespace folders\fileAdmin;
 	
-	class readcsv implements \interfaces\interfaces{
+	class readcsv {
 		
 		// This function is looking for headings 
-		public function column_headingCK($handle, $variable){
+		public function column_headingCK($handle, $colmn_titles){
 			
 			while(($row = fgetcsv($handle, ",")) !== FALSE){
 					if($colmn_titles){
@@ -27,7 +27,7 @@
 						$records[] = $record;
 					}
 				}
-				File::closeFile($handle);
+				\folders\fileAdmin\File::closeFile($handle);
 				return $records;
 		}
 	}

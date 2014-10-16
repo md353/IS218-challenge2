@@ -1,6 +1,5 @@
-
 <?php
-
+namespace folders\fileAdmin;
 //====================================================================|
 //	Michael De La Cruz 												  |
 //	IS218															  |
@@ -11,9 +10,9 @@
 //	Created a class for opening the CSV File  //
 //********************************************//	
 	
-	namespace challenge2\fileAdmin;
 	
-	class File implements \interfaces\interfaces{
+	
+	class File {
 		
 		//Function for opening a csv file for reading.	
 		public static function openFile($file){

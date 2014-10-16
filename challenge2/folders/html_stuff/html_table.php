@@ -10,7 +10,10 @@
 //	Created a class to create & print a table from 									//
 //  the information extracted off the CSVfile										//
 //**********************************************************************************//
-	class html_table{
+	
+	namespace folders\html_stuff;
+	
+ 	class html_table{
 		
 		// This function prints table from csv file by heading and data
 		public static function prTable($records,$titles){

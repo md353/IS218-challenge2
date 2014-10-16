@@ -4,7 +4,7 @@
 //	Created a class create HTML links based off the table created					  //
 //************************************************************************************//
 	
-namespace challenge2\html_stuff;
+namespace folders\html_stuff;
 
 		class prLinks {
 		
@@ -17,7 +17,7 @@ namespace challenge2\html_stuff;
 					$i++;
 			// Is called to print table after links are pressed on like in cars.php to make
 			// links using setLinks
-			\challenge2\html_stuff\html_table::setLinks('record',$i, $record['INSTNM']);
+			\folders\html_stuff\html_table::setLinks('record',$i, $record['INSTNM']);
 
 		}
 		}
